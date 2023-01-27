@@ -1,0 +1,70 @@
+.hero {
+  padding: 265px 0px;
+  background: url('../img/pictures/hero.jpg') 0 0 / cover no-repeat;
+  color: white;
+  @media (max-width: 992px) {
+    padding: 200px 0px;
+  }
+  @media (max-width: 767px) {
+    padding: 150px 0px;
+  }
+  &__time {
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 88px;
+    margin: 0px 0px 40px 0px;
+    @media (max-width: 767px) {
+      font-size: 48px;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+  }
+  &__nav {
+    @include flex-between;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+  &__btn {
+    padding: 38px 65px;
+    background-color: $dark-blue;
+    border: 1px solid $dark-blue;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    transition: background-color .2s ease, border-color .2s ease;
+    &:hover {
+      background-color: transparent;
+      border-color: white;
+    }
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: normal;
+      padding: 25px 40px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 420px) {
+      width: 100%;
+    }
+  }
+  &__social-list {
+    gap: 25px;
+  }
+  &__social-btn {
+    border-color: white;
+    color: white;
+  }
+}

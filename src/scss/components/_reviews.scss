@@ -1,0 +1,98 @@
+.reviews {
+  padding: 220px 0px;
+  background-color: $dark-blue;
+  @media (max-width: 992px) {
+    padding: 150px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 80px 0px;
+  }
+  &__slider {
+  }
+  &__slide {
+    @include flex-center;
+    flex-direction: column;
+  }
+  &__icon-quoute {
+    width: 83px;
+    height: 58px;
+    fill: $gold;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+      width: 50px;
+      height: 43px;
+      margin-bottom: 20px;
+    }
+  }
+  &__slide-title {
+    margin: 0px 0px 20px 0px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    color: $gold;
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 28px;
+      line-height: normal;
+    }
+  }
+  &__slide-content {
+    max-width: 780px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    margin: 0px 0px 40px 0px;
+    @media (max-width: 992px) {
+      max-width: 640px;
+    }
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+  }
+  &__slide-name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.245em;
+    color: $gold;
+    text-align: center;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
+  &__slider-btn {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: calc(50% - 35px);
+    z-index: 10;
+    &--prev {
+      left: 0;
+    }
+    &--next {
+      right: 0;
+      transform: rotate(180deg);
+    }
+    &:hover {
+      .reviews__slider-btn-icon {
+        stroke: $gold;
+      }
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__slider-btn-icon {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: white;
+    transition: stroke .2s ease;
+  }
+}

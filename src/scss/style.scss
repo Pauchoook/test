@@ -1,0 +1,23 @@
+@import './fonts';
+@import './base/normalize';
+@import './base/vars';
+@import './base/templates';
+@import './base/classes';
+@import './base/settings';
+@import './base/swiper';
+
+// work
+@import './work/_list';
+@import './work/_buttons';
+@import './work/_popup';
+@import './work/_input';
+
+// mini-components
+@import './mini-components/_burger';
+@import './mini-components/_social';
+
+// components
+@import './components/_header';
+@import './components/_hero';
+@import './components/_menu';
+@import './components/_reviews';

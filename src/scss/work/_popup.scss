@@ -1,0 +1,88 @@
+.popup {
+  &.open {
+    .popup__overlay,
+    .popup__window {
+      opacity: 1;
+      z-index: 1000;
+    }
+    .popup__overlay {
+      background-color: rgb(0, 0, 0, 0.5);
+    }
+    .popup__window {
+      transform: translateY(0);
+    }
+  }
+  &.hide {
+    .popup__overlay,
+    .popup__window {
+      opacity: 1;
+      z-index: 1000;
+    }
+    .popup__overlay {
+      background-color: rgb(0, 0, 0, 0);
+    }
+    .popup__window {
+      transform: translateY(-1000px);
+    }
+  }
+  &__overlay {
+    @include flex-center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0);
+    z-index: -1;
+    transition: background-color .5s ease;
+  }
+  &__window {
+    background-color: white;
+    padding: 20px;
+    transform: translateY(-1000px);
+    opacity: 0;
+    transition: transform .5s ease, opacity .5s ease;
+  }
+  &__close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px 20px auto;
+    &:hover {
+      .popup__close-icon {
+        fill: $gold;
+      }
+    }
+  }
+  &__close-icon {
+    width: 100%;
+    height: 100%;
+    fill: black;
+    transition: fill .2s ease;
+  }
+  &__form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  &__form-input {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  &__form-send {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    background-color: $dark-blue;
+    border: 1px solid $dark-blue;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    &:hover {
+      background-color: transparent;
+      color: $dark-blue;
+    }
+  }
+}

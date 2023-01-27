@@ -1,0 +1,84 @@
+.header {
+  position: absolute;
+  padding: 55px 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  @media (max-width: 767px) {
+    padding: 30px 0px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    @media (max-width: 1239px) {
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    width: 270px;
+    height: 55px;
+    margin-right: 140px;
+    @media (max-width: 1239px) {
+      width: 250px;
+      height: 50px;
+      margin-right: 0;
+    }
+    @media (max-width: 767px) {
+      width: 150px;
+      height: 30px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+    height: 100%;
+  }
+  &__nav {
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+    @media (max-width: 1239px) {
+      column-gap: 30px;
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__item {
+  }
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    transition: color 0.2s ease;
+    &:hover {
+      color: $gold;
+    }
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 24px;
+    transition: color .2s ease;
+    &:hover {
+      color: $gold;
+    }
+    @media (max-width: 1239px) {
+      margin-left: 0;
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__tel-icon {
+    width: 24px;
+    height: 24px;
+    stroke: $gold;
+    fill: none;
+    margin-right: 10px;
+  }
+}
